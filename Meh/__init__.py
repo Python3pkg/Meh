@@ -116,7 +116,7 @@ class _EditableConfig:
 						raise UnsupportedTypeError()
 			if dump_required:
 				if self._debug: 
-					print("Rewriting config because the value of '%s' changed." % name)
+					print(("Rewriting config because the value of '%s' changed." % name))
 				open(self._file, "w").write(self._dumps())
 
 

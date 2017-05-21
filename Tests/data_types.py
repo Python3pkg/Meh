@@ -27,15 +27,15 @@ except (IOError, ExceptionInConfigError):
 	config.dump(CONFIG_PATH)
 	config = config.load(CONFIG_PATH)
 
-print(config.list)
-print(config.tuple)
-print(config.dict)
-print(config.bytes)
-print(config.string)
-print(config.float)
-print(config.complex)
-print(config.int)
-print(config.boolean)
+print((config.list))
+print((config.tuple))
+print((config.dict))
+print((config.bytes))
+print((config.string))
+print((config.float))
+print((config.complex))
+print((config.int))
+print((config.boolean))
 
 config.list = [1, 2, 3, 4]
 config.tuple = ("1", "2", "3")
@@ -63,7 +63,7 @@ except UnsupportedTypeError:
 	print("Value validatation succeeded for dict")
 
 print("File contents:")
-print(config._dumps())
+print((config._dumps()))
 
 if not (len(argv) == 2 and argv[1] == "keep"):
 	remove(CONFIG_PATH)
